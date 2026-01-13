@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Flow 2026 | Private Planner</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div id="lock-screen">
+        <div class="lock-card">
+            <div class="lock-icon">🔒</div>
+            <h2>Secure Access</h2>
+            <p>Enter pin to view your private flow</p>
+            <input type="password" id="pass-input" maxlength="4" placeholder="••••">
+            <button class="unlock-btn" onclick="unlockApp()">Unlock System</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <p id="header-date-label" class="date-label">January 13, 2026</p>
+            <h1 id="view-title">Today's Focus</h1>
+        </header>
+
+        <div class="tabs">
+            <button id="tab-today" class="tab active" onclick="switchView('today')">Today</button>
+            <button id="tab-tomorrow" class="tab" onclick="switchView('tomorrow')">Tomorrow</button>
+        </div>
+
+        <div class="progress-card">
+            <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase;">Completion Score</span>
+            <div style="font-size: 2rem; font-weight: 800;" id="progress-text">0%</div>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+        </div>
+
+        <div class="input-box">
+            <input type="text" id="task-input" placeholder="Add a new mission...">
+            <button class="add-btn" onclick="addTask()">+</button>
+        </div>
+
+        <div class="task-list" id="task-list"></div>
+    </div>
+
+
+    <script src="in.js"></script>
+</body>
+</html>
